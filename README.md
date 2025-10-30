@@ -51,7 +51,7 @@ Number of scheduling nodes receiving service in the bottom layer of the hierarch
 
 R6. 17              /* Number of L2 scheduling nodes: Paths         */
 
-Number of scheduling nodes receiving service in the top layer of the hierarchy
+Number of scheduling nodes receiving service in the top layer of the hierarchy.
 
 In the case of the LD shaper, it must be equal to the number of network paths used by
 actual flows, + 1 unit for the path of the virtual empty queue (17 in the .inp file included here
@@ -59,13 +59,13 @@ for the LD case).
 
 In the case of the FLAT shaper, the top node of the hierarchy serves one node per queue, and then
 each node in the bottom layer of the hierarchy serves a single queue, so that the hierarchy
-reduces in practice to a flat wtructure where all service differentiation is enforced atthe top layer.
+reduces in practice to a flat structure where all service differentiation is enforced at the top layer.
 
 R7. 25		/* Number of links (link 0 for empty queue)	*/
 
 Number of distinct links that may be included in the network paths of the flows.
 
-In the LD shaper, this number must be at equal to the number of distinct links that appear
+In the LD shaper, this number must be equal to the number of distinct links that appear
 in the network paths of all actual flows, plus 1 unit for the virtual link used by the virtual
 empty queue.
 
@@ -84,7 +84,7 @@ from the source endpoint to the destination endpoint along the path.
 
 If the hierarchical LD shaper is in operation, one row follows the first row for every
 distinct network path that may be used by the flows of the source endpoint. Unused network paths
-can also be listed, for convenience in the case that flows using those paths are added or
+can also be listed for convenience in the case that flows using those paths are added or
 removed in subsequent runs of the program that use the same .inp file. The following example is taken from
 row R9 and shows network path #1:
 
@@ -95,7 +95,7 @@ links in the path (3), and the next three columns are the identifiers for the th
 the 1:25 range set by the value in row R7. Rows R10-R24 define Network Paths 2-16.
 
 There is no network path table in the .inp file for the FLAT shaper, as a consequence of using
-an algorithm that is not augmented with routing awareness (again becasue of the value 0 assigned in row R8).
+an algorithm that is not augmented with routing awareness (again because of the value 0 assigned in row R8).
 
 R25. 1	0.28		0	/* Virtual empty queue has direct entry into root scheduler	*/
 
@@ -155,10 +155,10 @@ respect to regularity in the distribution of service opportunities per interior 
 
 All scenarios shown in the manuscript have uniform load distribution, with all flows having
 the same rate and packet size. The reason is that equal load on all data paths maximizes the
-propability for the scenarioto produce larger latencies.
+probability for the scenario to produce larger latencies.
 
 To prove that the computation of the PSS works equally well for flow bandwidth
 distributions that are not uniform, we include in the set two .inp files (*-asym.inp) where
-each group of flows, associated with a distinct networlk path, has flows with different
+each group of flows, associated with a distinct network path, has flows with different
 service rates. The smoothness of the resulting PSS can be verified by looking at the time
 distribution of service opportunities/timeslots assigned to each of the physical links.
