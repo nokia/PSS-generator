@@ -17,8 +17,8 @@
 **		whose links are all eligible for service can be considered for service.
 **
 **              © 2023 Nokia
-**              Licensed under the BSD 3-Clause Clear License
-**              SPDX-License-Identifier: BSD-3-Clause-Clear
+**              Licensed under the BSD 3 Clause license
+**              SPDX-License-Identifier: BSD-3-Clause
 **
 */
 
