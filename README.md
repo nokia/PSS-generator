@@ -1,8 +1,8 @@
 *********************************************
 © 2023 Nokia                                  
-Licensed under the BSD 3-Clause Clear License 
+Licensed under the BSD 3 Clause License 
                                               
-SPDX-License-Identifier: BSD-3-Clause-Clear   
+SPDX-License-Identifier: BSD-3-Clause
 *********************************************
 
 The cm23 code computes the periodic service sequence (PSS) for the FLAT and LD ingress shapers
